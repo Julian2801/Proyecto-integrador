@@ -329,6 +329,10 @@ nav{
     margin: 0.5rem 1rem;
     font-size: 2.8rem;
 }
+
+.map{
+    display: none;
+}
 /*Fin de Contacto*/
 
 /*Pie de Pagina*/
@@ -449,6 +453,9 @@ footer p, i{
         display: flex;
         justify-content: space-around;
         align-items: center;
+    }
+    .map{
+        display: flex;
     }
     /* Fin de contactos */
 }
