@@ -1,0 +1,454 @@
+/* 
+👉 Debe contener un navbar que navegue las diversas secciones de la web.
+👉 Debe contener una portada alusiva a la temática de nuestra app.
+👉 Una sección de imágenes.
+👉 Una sección de contacto.
+👉 Un footer.
+👉 Una página para loguearse.
+👉 Una página para registrarse.
+👉 Ser responsive.
+👉 Estar deployado en vercel.  
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Mono:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* img{
+    width: 100%;
+    height:auto;
+}
+body{
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+:root{
+    --nregrito: rgb(0, 0,  0);
+    --negritomaslcarito: rgb(14, 16, 18 );
+    --grisecitonegro:rgb(37, 40, 43);
+    --grisecito:rgb(113, 113, 115 );
+    --blanquito: rgb(243, 243, 252);
+    --bold:900;
+    --medium:700;
+    --regular:400;
+    --thin:300;
+}
+html{
+    font-size: 62.5%;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+/*Navegacion*/
+header{
+    display: flex;
+    justify-content: center;
+    background-color: var(--nregrito);
+}
+
+nav{
+    width: 90%;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu i{
+    font-size: 2rem;
+    color: var(--blanquito);
+} 
+
+.item{
+    width:100%;
+    text-align: center;
+    order:3;
+    text-transform: uppercase;
+    display: none; 
+}
+.item a{
+    color: var(--blanquito);
+}
+.menu .logo{
+    width: 15rem;
+}
+
+.sign-li{
+    width:100%;
+    text-align: center;
+    order:3;
+    text-transform: uppercase;
+    display: none;
+}
+.sign-li a{
+    color: var(--blanquito);
+}
+/*fin de Navegacion*/
+
+/* Portada */
+.color{
+    background-color: var(--negritomaslcarito);
+}
+.section_about{
+    min-height: 46rem;
+    background-color: var(--nregrito);
+    padding: 6.4rem 4rem; 
+}
+
+.section_about div{
+    background-color: var();
+    color: var(--blanquito);
+    margin: 0 0 0 1.5rem;
+    
+}
+.section_about h2{
+    font-weight: var(--bold);
+    font-size: 5rem;
+}
+
+.section_about p{
+    margin-top: 2rem;
+    font-weight: var(--regular);
+    max-width: 55rem;
+    line-height: 3.7rem;
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+.section_about a{
+    color: var(--blanquito);
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: 0.2rem solid white;
+    border-radius: 0.5rem;
+    position: relative;
+    top: 3rem;
+}
+
+.tienda i{
+    font-size: 1.5rem;
+}
+
+.tienda:hover{
+    opacity: 0.7;
+}
+/*Fin de portada*/
+
+/* slider */
+.slider {
+    width: 100vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 10s linear infinite;
+    -webkit-animation: scroll 20s linear infinite;
+    width: calc(150px * 30);   
+}
+
+.slider .slide {
+    width: 150px;
+}
+
+.slider .slide img {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-150px * 15));
+        transform: translateX(calc(-123px * 15));
+    }
+}
+/*Fin de slider*/
+
+/* Descripcion */
+
+.section_description{
+    
+    background-color: var(--negritomaslcarito);
+}
+.section_description h2{
+    color: var(--blanquito);
+    font-weight: var(--medium);
+    font-size: 2.6rem;
+    padding: 2rem;
+    text-transform: uppercase;
+    margin-left: 5rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grisecitonegro);
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    line-height: rem;
+    min-width: 25rem;
+    
+    
+}
+
+.container_description img{
+    max-width: 20rem;
+    border-radius: 1rem;
+    
+    
+}
+
+.container_span{
+    position: absolute;
+    background-color: green;
+    color: var(--blanquito);
+    font-size: 1.3rem;
+    font-weight: var(--medium);
+    padding: 0.2rem 1rem;
+    margin: 0rem 0rem 29rem 12rem;
+    border-radius: 0.5rem;
+}
+.container_spanr{
+    position: absolute;
+    background-color: red;
+    color: var(--blanquito);
+    font-size: 1.3rem;
+    font-weight: var(--medium);
+    padding: 0.2rem 1rem;
+    margin: 0rem 0rem 29rem 12rem;
+    border-radius: 0.5rem;
+}
+.container_description p{
+    color: var(--blanquito);
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+}
+
+.container_p{
+    font-size: 0;
+    display: block;
+}
+
+.container_description a{
+    color: var(--blanquito);
+    margin-top: 1rem;
+    padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+    background-color: green;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+}
+:hover.cartgo{
+    opacity: 0.7;
+}
+.precio{
+    position: relative;
+    top: 1rem;
+    right: 7rem; 
+    font-weight: var(--bold);
+}
+/*Fin de descripcion*/
+
+/*Contacto*/
+.contact{
+    margin: 5rem 0 0 5rem;
+    background-color: var(--negritomaslcarito);
+    min-height: 40rem;
+}
+
+.contact h2{
+    color: var(--blanquito);
+    font-size: 3rem;
+    margin: 9rem 0 2rem 1rem;
+    text-transform: uppercase; 
+}
+.contacto{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.7rem;
+    font-weight: var(--regular);
+}
+
+.icon_contact{
+    display: flex;
+    margin-bottom: 1.5rem;
+    
+}
+.icon_contact p{
+    color: var(--blanquito);
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+.icon_contact i{
+    color: white;
+    font-size: 2.8rem;
+    margin-left: 1rem;
+}
+
+.redes_sociales{
+    color: var(--blanquito);
+    display: flex;
+    
+}
+.redes_sociales i{
+    margin: 0.5rem 1rem;
+    font-size: 2.8rem;
+}
+/*Fin de Contacto*/
+
+/*Pie de Pagina*/
+footer{
+    display: flex;
+    border-top: 0.001rem solid var(--blanquito);
+    min-height: 18rem;
+    background-color: var(--nregrito);
+    align-items: center;
+    justify-content: center;
+    color: var(--blanquito);
+    text-align: center;
+}
+footer p, i{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.derechos{
+    display: flex;
+    align-items: center;
+}
+.mica{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+/*Fin de Pie de Pagina*/
+
+/*media queries*/
+@media (min-width:1024px) {
+    /* Navegacion */
+    .menu{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        font-size: 1.3rem;
+    }
+    .item:hover a{
+        opacity: 0.5;
+    }
+    .item{
+        display: block;
+        cursor: pointer;
+        width: auto;
+        padding: 2rem;
+    }
+    .btn-container{
+        display: none;
+    }
+    .li-container{
+        display: flex;
+        justify-content:flex-end;
+        flex-direction: row-reverse;
+        max-width: 80rem;
+    }
+    .sign{
+        display: flex;
+        border: solid 0.1rem var(--blanquito);
+        border-radius: 1rem;       
+    }
+    .sign-li{
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        width: auto;
+        transition:  1s;
+    }
+    .sign-up a{
+        transition: 1s;
+    }
+    :hover.sign-in{
+        background-color: var(--grisecitonegro);
+        border-radius: 1rem 0rem 0rem 1rem;
+    }
+    :hover.sign-in a{
+        color: var(--blanquito);  
+    }
+    :hover.sign-up{
+        background-color: var(--grisecito);
+        border-radius: 0rem 1rem 1rem 0rem;
+    }
+    .sign-up:hover a{
+        color:black;
+    }
+    .sign-li a{
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+    /* Fin de navegacion */
+    /* Description */
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 100rem;
+        gap: 5rem;
+
+    }
+    /* Fin de description */
+
+    /* Slider */
+    @keyframes scroll {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(calc(-150px * 15));
+            transform: translateX(calc(-05rem * 15));
+        }
+    }
+    /* Fin de Slider */
+
+    /* Contacto */
+    .contacts{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    /* Fin de contactos */
+}

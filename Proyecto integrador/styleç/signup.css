@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+* img{
+    width: 100%;
+    height:auto;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Mono:wght@400;700&display=swap');
+
+:root{
+    --nregrito: rgb(0, 0,  0);
+    --negritomaslcarito: rgb(14, 16, 18 );
+    --grisecitonegro:rgb(37, 40, 43);
+    --grisecito:rgb(113, 113, 115 );
+    --blanquito: rgb(243, 243, 252);
+    --bold:900;
+    --medium:700;
+    --regular:400;
+    --thin:300;
+}
+
+body{
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+    font-family: 'Lato', sans-serif;   
+    background-color: black;
+    font-size: 1rem;
+}
+a{
+    text-decoration: none;
+    color: var(--blanquito);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.formulario{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--negritomaslcarito);
+    padding: 3rem;
+    color: var(--blanquito);
+    /* text-transform: uppercase; */
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--grisecito);
+    
+}
+form img{
+    border-radius: 1rem;
+}
+form p{
+    margin-top: 1.5rem;
+}
+input{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    background-color:var(--negritomaslcarito);
+    color: var(--blanquito);
+}
+.signin{
+    transition:0.5s;
+}                                                                
+.signin:hover{
+    opacity: 0.5;
+}
+.Ingresar{
+    background-color: var(--grisecitonegro);
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    transition: 1s;
+}
+.Ingresar:hover{
+    background-color: var(--blanquito);
+    color: var(--nregrito);
+}
+::placeholder{
+    color: var(--blanquito);
+}
